@@ -193,18 +193,19 @@ nav {
 
 /* PAGE HERO */
 .page-hero {
-  padding: 9rem 5vw 4rem;
+  padding: 7.5rem 5vw 3.2rem;
   background: linear-gradient(135deg, rgba(26,107,255,0.08) 0%, rgba(255,92,53,0.08) 100%);
   border-bottom: 1px solid var(--light);
 }
 .page-hero .section-title { margin-bottom: 1rem; }
 .page-hero .section-subtitle { max-width: 680px; }
-.page-hero .hero-actions { margin-top: 2.75rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.page-hero .hero-actions { margin-top: 2.25rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .page-hero .about-hero-logo {
   width: 140px;
   height: auto;
   display: block;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.9rem;
+  clip-path: inset(18% 0 18% 0);
 }
 
 /* STATS */
