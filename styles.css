@@ -199,7 +199,13 @@ nav {
 }
 .page-hero .section-title { margin-bottom: 1rem; }
 .page-hero .section-subtitle { max-width: 680px; }
-.page-hero .hero-actions { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.page-hero .hero-actions { margin-top: 2.75rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.page-hero .about-hero-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin-bottom: 1.2rem;
+}
 
 /* STATS */
 .stats {
@@ -399,25 +405,25 @@ section { padding: 7rem 5vw; }
 .hs-badge .hs-text { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; margin-top: 0.4rem; }
 
 /* TEAM */
-.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(260px, 1fr)); gap: 2.5rem; margin-top: 3.5rem; }
 .team-card {
   background: var(--white);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 2.6rem;
   border: 1px solid var(--light);
   transition: box-shadow .2s, transform .2s;
 }
 .team-card:hover { box-shadow: 0 16px 48px rgba(10,15,30,0.1); transform: translateY(-4px); }
 .team-avatar {
-  width: 110px; height: 110px;
+  width: 140px; height: 140px;
   border-radius: 50%;
   background: var(--light);
   display: flex; align-items: center; justify-content: center;
   font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--accent);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
   overflow: hidden;
 }
 .team-avatar img {
