@@ -395,6 +395,29 @@ section { padding: 7rem 5vw; }
 .homeschool-banner .hs-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
 .homeschool-banner h3 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-bottom: 0.8rem; }
 .homeschool-banner p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; max-width: 520px; }
+.trust-list {
+  list-style: none;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.trust-list li {
+  padding-left: 1rem;
+  position: relative;
+}
+.trust-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 .hs-badge {
   background: var(--accent2);
   color: var(--white);
