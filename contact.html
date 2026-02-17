@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Future Mind Institute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo_futuremindinstitute.png" alt="Future Mind Institute logo" />
+    Future<span>Mind</span> Institute
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Programs</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <div class="section-label">Get in Touch</div>
+  <h1 class="section-title">Tell us about your school or organization</h1>
+  <p class="section-subtitle">We respond within one business day. Share your goals and we will propose the right program mix.</p>
+</header>
+
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <h2 class="section-title">Let us build your AI readiness plan</h2>
+  <p class="section-subtitle">Whether you are a school administrator, teacher, or homeschool parent, we will help you take the next step.</p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>We would love to hear from you</h3>
+      <p>Tell us about your school's needs. We will build a program that fits your institution's size, curriculum, and goals.</p>
+      <div class="contact-method">
+        <span class="cm-icon">Location</span>
+        <div>
+          <p>Currently active in</p>
+          <a>Maryland, USA - and expanding</a>
+        </div>
+      </div>
+      <div class="contact-method">
+        <span class="cm-icon">Regions</span>
+        <div>
+          <p>Serving</p>
+          <a>USA, English-speaking countries, and Africa</a>
+        </div>
+      </div>
+      <div class="contact-method">
+        <span class="cm-icon">Email</span>
+        <div>
+          <p>Email us at</p>
+          <a href="mailto:hello@futuremindinstitute.org">hello@futuremindinstitute.org</a>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your name" required />
+      <input type="email" placeholder="Email address" required />
+      <input type="text" placeholder="School or organization name" />
+      <select>
+        <option value="" disabled selected>I am a...</option>
+        <option>School administrator</option>
+        <option>Teacher / Educator</option>
+        <option>Homeschool parent</option>
+        <option>District leader</option>
+        <option>Potential partner</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Tell us about your school and what you're looking for. How many teachers? What grade levels? Any specific topics?"></textarea>
+      <button type="submit">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="foot-logo">
+      <img src="logo_futuremindinstitute.png" alt="Future Mind Institute logo" />
+      Future<span>Mind</span> Institute
+    </div>
+    <div style="margin-top: 0.4rem;">Non-profit · AI Literacy · Education</div>
+  </div>
+  <div style="display:flex; gap: 1.5rem; flex-wrap: wrap;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Programs</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2026 Future Mind Institute. All rights reserved.</div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Message sent! We will be in touch soon.';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+  }
+</script>
+
+</body>
+</html>
