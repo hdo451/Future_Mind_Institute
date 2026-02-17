@@ -201,11 +201,12 @@ nav {
 .page-hero .section-subtitle { max-width: 680px; }
 .page-hero .hero-actions { margin-top: 2.25rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .page-hero .about-hero-logo {
-  width: 140px;
+  width: 170px;
   height: auto;
   display: block;
   margin-bottom: 0.9rem;
   clip-path: inset(18% 0 18% 0);
+  mix-blend-mode: multiply;
 }
 
 /* STATS */
