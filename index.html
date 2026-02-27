@@ -317,5 +317,123 @@
   }
 </script>
 
+<!-- NEW SECTIONS -->
+
+<section id="videos" class="section-spacious">
+  <div class="section-label">Videos de Clases</div>
+  <h2 class="section-title">Aprende con nuestras clases en video</h2>
+  <p class="section-subtitle">Explora nuestra colección de videos educativos. Próximamente alojados en YouTube.</p>
+  <div class="videos-grid">
+    <div class="video-card">
+      <iframe width="360" height="215" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Clase 1" frameborder="0" allowfullscreen></iframe>
+      <h4>Introducción a la IA</h4>
+      <p>Descubre los conceptos básicos de la inteligencia artificial.</p>
+    </div>
+    <div class="video-card">
+      <iframe width="360" height="215" src="https://www.youtube.com/embed/9bZkp7q19f0" title="Clase 2" frameborder="0" allowfullscreen></iframe>
+      <h4>Prompt Engineering</h4>
+      <p>Aprende a crear prompts efectivos para modelos de IA.</p>
+    </div>
+    <!-- Más videos próximamente -->
+  </div>
+</section>
+
+<section id="homeschooling" class="section-spacious">
+  <div class="section-label">Homeschooling</div>
+  <h2 class="section-title">Recursos para educación en casa</h2>
+  <p class="section-subtitle">Guías, materiales y apoyo para familias que educan en casa.</p>
+  <div class="homeschooling-grid">
+    <div class="hs-resource">
+      <h4>Guía de inicio</h4>
+      <p>Todo lo que necesitas para comenzar con homeschooling y AI.</p>
+    </div>
+    <div class="hs-resource">
+      <h4>Testimonios</h4>
+      <p>Historias de familias que usan IA en su educación.</p>
+    </div>
+    <div class="hs-resource">
+      <h4>Materiales descargables</h4>
+      <p>Próximamente: PDFs, plantillas y recursos interactivos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="prompts" class="section-spacious">
+  <div class="section-label">Biblioteca de Prompts</div>
+  <h2 class="section-title">Explora y utiliza prompts para IA</h2>
+  <p class="section-subtitle">Encuentra prompts útiles para diferentes tareas educativas.</p>
+  <div class="prompts-grid">
+    <div class="prompt-card">
+      <h4>Prompt para resumen de textos</h4>
+      <p>"Resume el siguiente texto en 5 puntos clave: [texto]"</p>
+      <button onclick="navigator.clipboard.writeText('Resume el siguiente texto en 5 puntos clave: [texto]')">Copiar</button>
+    </div>
+    <div class="prompt-card">
+      <h4>Prompt para generación de preguntas</h4>
+      <p>"Genera 10 preguntas de opción múltiple sobre el siguiente tema: [tema]"</p>
+      <button onclick="navigator.clipboard.writeText('Genera 10 preguntas de opción múltiple sobre el siguiente tema: [tema]')">Copiar</button>
+    </div>
+    <!-- Más prompts próximamente -->
+  </div>
+</section>
+
+<section id="certificacion" class="section-spacious">
+  <div class="section-label">Certificación</div>
+  <h2 class="section-title">Certifícate con Future Mind Institute</h2>
+  <p class="section-subtitle">¿Has visto nuestros videos? Regístrate y obtén tu certificado.</p>
+  <div class="cert-grid">
+    <form class="cert-form" onsubmit="handleCertSubmit(event)">
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <input type="text" placeholder="Video visto" required />
+      <button type="submit">Solicitar Certificado</button>
+    </form>
+    <div class="cert-info">
+      <h4>¿Cómo funciona?</h4>
+      <ul>
+        <li>1. Mira un video de clase.</li>
+        <li>2. Completa el formulario.</li>
+        <li>3. Recibe tu certificado por email.</li>
+      </ul>
+      <p>Próximamente: validación automática y seguimiento de progreso.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="foot-logo">
+      <img src="logo_futuremindinstitute.png" alt="Future Mind Institute logo" />
+      Future<span>Mind</span> Institute
+    </div>
+    <div style="margin-top: 0.4rem;">Non-profit · AI Literacy · Education</div>
+  </div>
+  <div style="display:flex; gap: 1.5rem; flex-wrap: wrap;">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Programs</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2026 Future Mind Institute. All rights reserved.</div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✓ Message sent! We\'ll be in touch soon.';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+  }
+  function handleCertSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✓ Solicitud enviada!';
+    btn.style.background = '#22c55e';
+    btn.disabled = true;
+  }
+</script>
+
 </body>
-</html>
