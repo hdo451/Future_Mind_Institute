@@ -41,7 +41,7 @@ nav {
 }
 .nav-logo img { height: 52px; width: auto; display: block; }
 .nav-logo span { color: var(--accent); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links { display: flex; gap: 1.2rem; list-style: none; }
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
@@ -90,6 +90,35 @@ nav {
   font-weight: 500;
   margin-bottom: 1.5rem;
   color: var(--muted);
+}
+.hero-main-image-wrap {
+  grid-column: 1 / -1;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 2rem;
+}
+.hero-main-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, #f5f3ee 0%, rgba(245,243,238,0) 8%, rgba(245,243,238,0) 92%, #f5f3ee 100%),
+    linear-gradient(to bottom, #f5f3ee 0%, rgba(245,243,238,0) 10%, rgba(245,243,238,0) 90%, #f5f3ee 100%);
+}
+.hero-main-image {
+  width: 100%;
+  max-height: 78vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 14px 36px rgba(10,15,30,0.12);
+  display: block;
 }
 .hero-badge::before {
   content: '';
@@ -697,6 +726,12 @@ footer a:hover { color: var(--white); }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding-top: 8rem; }
   .hero-visual { display: none; }
+  .hero-main-image-wrap::after {
+    background:
+      linear-gradient(to right, #f5f3ee 0%, rgba(245,243,238,0) 5%, rgba(245,243,238,0) 95%, #f5f3ee 100%),
+      linear-gradient(to bottom, #f5f3ee 0%, rgba(245,243,238,0) 7%, rgba(245,243,238,0) 93%, #f5f3ee 100%);
+  }
+  .hero-main-image { max-height: 62vh; }
   .stats { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
@@ -712,6 +747,7 @@ footer a:hover { color: var(--white); }
 }
 @media (max-width: 600px) {
   .stats { grid-template-columns: 1fr 1fr; }
+  .hero-main-image { max-height: 46vh; }
   .courses-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .stat-item { padding: 1.5rem; }
