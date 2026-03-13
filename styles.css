@@ -67,7 +67,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 10rem 5vw 6rem;
+  padding: 10rem 0 6rem;
   gap: 4rem;
   position: relative;
   overflow: hidden;
@@ -93,31 +93,31 @@ nav {
 }
 .hero-main-image-wrap {
   grid-column: 1 / -1;
-  width: 100vw;
+  width: 100%;
+  max-width: none;
+  height: auto;
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  left: auto;
+  transform: none;
+  overflow: visible;
   margin-bottom: 2rem;
 }
+.hero-content,
+.hero-visual {
+  padding-inline: 5vw;
+}
 .hero-main-image-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(to right, #f5f3ee 0%, rgba(245,243,238,0) 8%, rgba(245,243,238,0) 92%, #f5f3ee 100%),
-    linear-gradient(to bottom, #f5f3ee 0%, rgba(245,243,238,0) 10%, rgba(245,243,238,0) 90%, #f5f3ee 100%);
+  content: none;
 }
 .hero-main-image {
   width: 100%;
-  max-height: 78vh;
+  min-width: 0;
   height: auto;
   object-fit: contain;
+  object-position: center;
   border-radius: 0;
   border: 0;
-  box-shadow: 0 14px 36px rgba(10,15,30,0.12);
+  box-shadow: none;
   display: block;
 }
 .hero-badge::before {
@@ -725,13 +725,9 @@ footer a:hover { color: var(--white); }
 }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding-top: 8rem; }
+  .hero-content, .hero-visual { padding-inline: 6vw; }
   .hero-visual { display: none; }
-  .hero-main-image-wrap::after {
-    background:
-      linear-gradient(to right, #f5f3ee 0%, rgba(245,243,238,0) 5%, rgba(245,243,238,0) 95%, #f5f3ee 100%),
-      linear-gradient(to bottom, #f5f3ee 0%, rgba(245,243,238,0) 7%, rgba(245,243,238,0) 93%, #f5f3ee 100%);
-  }
-  .hero-main-image { max-height: 62vh; }
+  .hero-main-image-wrap { height: auto; }
   .stats { grid-template-columns: 1fr 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
@@ -747,7 +743,7 @@ footer a:hover { color: var(--white); }
 }
 @media (max-width: 600px) {
   .stats { grid-template-columns: 1fr 1fr; }
-  .hero-main-image { max-height: 46vh; }
+  .hero-main-image-wrap { height: auto; }
   .courses-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .stat-item { padding: 1.5rem; }
